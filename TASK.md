@@ -2,243 +2,84 @@
 
 ## 📋 Project Overview
 
-Build a domain-specific chatbot tailored to **healthcare** that understands user queries and provides relevant medical information. The chatbot will be implemented using a pre-trained Transformer model from Hugging Face, fine-tuned on medical Q&A data.
+This is an individual project
+
+This project requires you to build a chatbot tailored to a specific domain, such as education, healthcare, agriculture, finance, legal services, or customer support. The chatbot must understand user queries and provide relevant responses within its specialized domain.
+
+You will implement your chatbot using a pre-trained Transformer model from Hugging Face, such as BERT, GPT-2, ALBERT, T5, or any other suitable model. This project will give you hands-on experience in fine-tuning Transformer models for NLP applications while leveraging modern libraries like Hugging Face’s transformers and TensorFlow. We have extractive QA (which extracts answers from a provided context), like the one we practiced in class, and generative QA (which generates free-text answers). Feel free to use any approach, but we recommend you explore fine-tuning a generative QA.
+
+To start, you must collect or create a dataset of conversational pairs that align with your chosen domain. The dataset should be diverse, covering various user intents to improve generalization. Data preprocessing is essential and should include tokenization, normalization, and handling missing values to ensure the data is formatted correctly for input into a Transformer model.
+
+Next, you will select a pre-trained Transformer model from Hugging Face and fine-tune it using your dataset. The model should be implemented in Python using TensorFlow. Hyperparameter tuning, including adjustments to learning rate, batch size, optimizer selection, and training epochs, should be conducted to improve performance. The impact of these adjustments must be documented.
+
+Evaluation will involve the use of appropriate NLP metrics such as BLEU score, F1-score, or perplexity. You should also conduct qualitative testing by interacting with the chatbot and analyzing its ability to generate meaningful responses. If the chatbot is domain-specific, it should correctly answer relevant questions while rejecting out-of-domain queries appropriately.
+
+Your chatbot must be deployed in a way that users can interact with it. This can be achieved through a mobile app, a simple web interface using Flask, Streamlit, or Gradio, a command-line interface (CLI), or an API-based chatbot. The interface should be intuitive, allowing users to input queries and receive appropriate responses.
+
+For submission, you must provide a well-documented GitHub repository containing a Jupyter Notebook or Python script covering data preprocessing, model training, and chatbot interaction. The repository should also include a README file explaining the dataset, performance metrics, steps to run the chatbot, and examples of conversations. Additionally, you must submit a 5–10 minute demo video showcasing the chatbot’s functionality, user interactions, and key insights.
+
+Rubric:
+
+Dataset Collection & Preprocessing
+10 to >6.0 pts
+Examplary
+Uses a high-quality, domain-specific dataset. Comprehensive preprocessing steps are applied; a clear explanation of tokenization and normalization processes is used. - Tokenization is done using appropriate methods (e.g., WordPiece for BERT). - Data is cleaned effectively (removal of noise, handling missing values). - Detailed documentation of preprocessing steps provided.
+
+Model Fine-tuning
+15 to >9.0 pts
+Examplary
+A thorough exploration of hyperparameters with clear documentation of adjustments made; significant performance improvements observed through validation metrics (e.g., accuracy, F1 score). - Multiple hyperparameters tuned (e.g., learning rate, batch size). - Results show improvement over baseline performance by at least 10%. - Included experiment table comparing different hyperparameters, model architectures, or preprocessing techniques.
+
+Summative - Chatbot
+Criteria Ratings Pts
+This criterion is linked to a Learning OutcomeProject Definition & Domain Alignment
+5 to >3.0 pts
+Examplary
+Clearly defines the chatbot’s purpose and aligns it with a specific domain. Justifies the relevance and necessity of the chatbot.
+3 to >2.0 pts
+Proficient
+Defines the chatbot’s purpose but lacks a strong domain focus or justification.
+2 to >0.0 pts
+Developing
+Problem definition is vague or lacks clarity on domain relevance.
+0 pts
+Poor
+No clear problem definition or domain alignment.
+5 pts
+This criterion is linked to a Learning OutcomeDataset Collection & Preprocessing
+10 to >6.0 pts
+Examplary
+Uses a high-quality, domain-specific dataset. Comprehensive preprocessing steps are applied; a clear explanation of tokenization and normalization processes is used. - Tokenization is done using appropriate methods (e.g., WordPiece for BERT). - Data is cleaned effectively (removal of noise, handling missing values). - Detailed documentation of preprocessing steps provided.
+6 to >4.0 pts
+Proficient
+Uses an appropriate dataset. Basic preprocessing steps are applied; some explanation of methods used but lacks depth in details. - Tokenization is performed but may not be optimal. - Some cleaning done but minor issues remain (e.g., some noise not removed). - Documentation of preprocessing steps is present but lacks clarity.
+4 to >0.0 pts
+Fair
+Minimal preprocessing performed; lacks clarity in explanation of methods used or rationale behind choices. - Tokenization is inconsistent or poorly executed. - Limited cleaning done; several issues remain in the data. - Documentation of preprocessing steps is vague or incomplete.
+0 pts
+Poor
+Little to no data processing performed; fails to demonstrate understanding of necessary preprocessing techniques. - No tokenization applied; raw data is used directly. - No cleaning performed; data remains noisy and unstructured. - No documentation was provided for preprocessing steps.
+10 pts
+This criterion is linked to a Learning OutcomeModel Fine-tuning
+15 to >9.0 pts
+Examplary
+A thorough exploration of hyperparameters with clear documentation of adjustments made; significant performance improvements observed through validation metrics (e.g., accuracy, F1 score). - Multiple hyperparameters tuned (e.g., learning rate, batch size). - Results show improvement over baseline performance by at least 10%. - Included experiment table comparing different hyperparameters, model architectures, or preprocessing techniques.
+9 to >6.0 pts
+Good
+Basic hyperparameter tuning performed; some documentation present but lacks detail on effects of adjustments made. - At least one hyperparameter tuned with moderate impact on performance. - Results show some improvement over baseline performance (5-10%). - Includes experiment table with 2 experiments or less but lacks depth in analysis or comparison
+6 to >0.0 pts
+Fair
+Limited tuning attempted with minimal impact on performance; little documentation provided on adjustments made or their effects. - Few hyperparameters adjusted with little effect on results. - Results show minimal change from baseline performance (<5%). - Includes one experiment with minimal variations
+0 pts
+Poor
+No hyperparameter tuning attempted; fails to demonstrate understanding of how tuning can affect model performance. - Baseline model used without any adjustments made. - No results documented regarding performance metrics.
+15 pts
+This criterion is linked to a Learning OutcomePerformance Metrics
+5 to >3.0 pts
+Examplary
+Uses appropriate NLP metrics (BLEU, F1-score, perplexity, qualitative testing) and thoroughly analyzes chatbot performance. - Multiple evaluation metrics reported with a thorough analysis of results.
 
 **Domain:** Healthcare  
 **Dataset:** [MedQuAD - Medical Question Answer Dataset](https://www.kaggle.com/datasets/pythonafroz/medquad-medical-question-answer-for-ai-research)  
 **Approach:** Generative QA (recommended)  
 **Framework:** TensorFlow + Hugging Face Transformers
-
----
-
-## 🎯 Project Requirements
-
-### 1. Dataset Collection & Preprocessing
-
--   ✅ Collect/create dataset of conversational pairs aligned with healthcare domain
--   Dataset should be diverse, covering various user intents
--   **Preprocessing requirements:**
-    -   Tokenization (appropriate methods like WordPiece for BERT)
-    -   Normalization
-    -   Handling missing values
-    -   Data cleaning (removal of noise)
-    -   Format data correctly for Transformer model input
-
-### 2. Model Selection & Fine-tuning
-
--   Select a pre-trained Transformer model from Hugging Face:
-    -   Options: BERT, GPT-2, ALBERT, T5, Flan-T5, or similar
--   Implement in Python using TensorFlow
--   Fine-tune the model on the healthcare dataset
--   **Hyperparameter tuning:**
-    -   Learning rate
-    -   Batch size
-    -   Optimizer selection
-    -   Training epochs
-    -   Document impact of adjustments
-
-### 3. Evaluation
-
--   Use appropriate NLP metrics:
-    -   BLEU score
-    -   F1-score
-    -   Perplexity
--   Qualitative testing through chatbot interaction
--   Analyze ability to generate meaningful responses
--   Test domain-specificity (correctly answer healthcare queries, appropriately handle out-of-domain questions)
-
-### 4. Deployment
-
-Choose one or more deployment methods:
-
--   ✅ **API-based chatbot** (planned)
--   ✅ **Web interface** using Flask/Streamlit/Gradio or Next.js on Vercel (planned)
--   Mobile app
--   Command-line interface (CLI)
-
-Interface must be intuitive for user input and response display.
-
-### 5. Submission Requirements
-
--   **GitHub Repository:**
-    -   Jupyter Notebook or Python script
-    -   Data preprocessing code
-    -   Model training code
-    -   Chatbot interaction code
-    -   README with:
-        -   Dataset explanation
-        -   Performance metrics
-        -   Steps to run the chatbot
-        -   Example conversations
--   **Demo Video:** 5-10 minutes showcasing:
-    -   Chatbot functionality
-    -   User interactions
-    -   Key insights
-
----
-
-## 📊 Grading Rubric
-
-### Dataset Collection & Preprocessing (10 points)
-
-**Exemplary (10 to >6.0 pts):**
-
--   Uses high-quality, domain-specific dataset
--   Comprehensive preprocessing steps applied
--   Clear explanation of tokenization and normalization processes
--   Tokenization done using appropriate methods (e.g., WordPiece for BERT)
--   Data cleaned effectively (removal of noise, handling missing values)
--   Detailed documentation of preprocessing steps provided
-
-### Model Fine-tuning (15 points)
-
-**Exemplary (15 to >9.0 pts):**
-
--   Thorough exploration of hyperparameters with clear documentation
--   Significant performance improvements through validation metrics (accuracy, F1 score)
--   Multiple hyperparameters tuned (learning rate, batch size, etc.)
--   Results show improvement over baseline performance by **at least 10%**
--   Included experiment table comparing:
-    -   Different hyperparameters
-    -   Model architectures
-    -   Preprocessing techniques
-
-### Performance Metrics (5 points)
-
-**Exemplary (5 to >3.0 pts):**
-
--   Uses appropriate NLP metrics (BLEU, F1-score, perplexity, qualitative testing)
--   Thoroughly analyzes chatbot performance
--   Multiple evaluation metrics reported with thorough analysis of results
-
----
-
-## 🧩 Project Plan
-
-| Stage | Task                                                       | Output                                       |
-| ----- | ---------------------------------------------------------- | -------------------------------------------- |
-| 1     | Dataset collection (MedQuAD)                               | Raw dataset (.csv / .json)                   |
-| 2     | Data preprocessing (cleaning, normalization, tokenization) | Processed dataset ready for training         |
-| 3     | Model selection (Flan-T5 or GPT-2)                         | Loaded pre-trained model                     |
-| 4     | Fine-tuning using TensorFlow                               | Trained domain-specific chatbot model        |
-| 5     | Hyperparameter tuning                                      | Optimized performance and validation results |
-| 6     | Evaluation (BLEU, F1, Perplexity)                          | Metrics report and analysis                  |
-| 7     | API development                                            | REST API for chatbot inference               |
-| 8     | Web interface deployment                                   | Vercel-hosted web app (Next.js/React)        |
-| 9     | Documentation & demo                                       | README, video, GitHub repository             |
-
----
-
-## 📁 Dataset Information
-
-**Source:** [MedQuAD on Kaggle](https://www.kaggle.com/datasets/pythonafroz/medquad-medical-question-answer-for-ai-research)
-
-**Description:** Medical Question-Answer pairs for AI research, containing:
-
--   Medical questions from patients
--   Expert answers from healthcare professionals
--   Coverage of various medical topics and conditions
-
-**Location:** `data/medquad.csv`
-
----
-
-## 🛠️ Technical Stack
-
-### Core Technologies
-
--   **Language:** Python 3.8+
--   **Framework:** TensorFlow
--   **NLP Library:** Hugging Face Transformers
--   **Model Options:** Flan-T5, GPT-2, T5, BERT
-
-### Development Tools
-
--   Jupyter Notebook / Python scripts
--   pandas, numpy for data processing
--   sklearn for metrics
--   nltk / spaCy for text preprocessing
-
-### Deployment Stack
-
--   **Backend API:** Flask / FastAPI
--   **Frontend:** Next.js / React (Vercel deployment)
--   Alternative: Streamlit / Gradio for quick prototyping
-
----
-
-## 🚀 Deployment Strategy
-
-### Option 1: API + Web App (Recommended)
-
-1. **Backend API:**
-
-    - Build REST API using Flask/FastAPI
-    - Endpoints for chatbot inference
-    - Deploy on Heroku/Railway/Google Cloud
-
-2. **Frontend Web App:**
-    - Next.js/React application
-    - Clean, intuitive chat interface
-    - Deploy on Vercel
-    - Connect to backend API
-
-### Option 2: All-in-One Deployment
-
--   Use Streamlit or Gradio for quick deployment
--   Host on Hugging Face Spaces or Streamlit Cloud
--   Simpler but less customizable
-
----
-
-## 📝 Success Criteria
-
--   [ ] High-quality healthcare-specific dataset preprocessed
--   [ ] Model fine-tuned with documented hyperparameter experiments
--   [ ] Performance improvement of at least 10% over baseline
--   [ ] Multiple evaluation metrics (BLEU, F1, Perplexity) reported
--   [ ] Deployed chatbot accessible via web interface or API
--   [ ] Comprehensive documentation in README
--   [ ] 5-10 minute demo video completed
--   [ ] GitHub repository with all code and documentation
--   [ ] Chatbot correctly handles healthcare queries
--   [ ] Appropriate handling of out-of-domain questions
-
----
-
-## 📚 Key Considerations
-
-### Extractive QA vs Generative QA
-
--   **Extractive QA:** Extracts answers from provided context (like BERT-based models)
--   **Generative QA:** Generates free-text answers (like T5, GPT-2, Flan-T5)
--   **Recommendation:** Use generative QA for more natural responses
-
-### Model Comparison
-
-| Model       | Type       | Strengths                           | Considerations         |
-| ----------- | ---------- | ----------------------------------- | ---------------------- |
-| **Flan-T5** | Generative | Instruction-tuned, excellent for QA | Larger model size      |
-| **GPT-2**   | Generative | Good text generation                | May require more data  |
-| **BERT**    | Extractive | Strong understanding                | Needs context passages |
-| **T5**      | Generative | Versatile, text-to-text             | Resource intensive     |
-
-### Evaluation Metrics
-
--   **BLEU Score:** Measures similarity between generated and reference answers
--   **F1 Score:** Precision and recall of generated tokens
--   **Perplexity:** How well the model predicts the text
--   **Qualitative:** Human evaluation of response quality and relevance
-
----
-
-## 🎬 Next Steps
-
-1. ✅ Dataset already downloaded (`data/medquad.csv`)
-2. Explore and analyze the dataset
-3. Implement preprocessing pipeline
-4. Set up model training infrastructure
-5. Experiment with hyperparameters
-6. Evaluate and iterate
-7. Build deployment interface
-8. Create documentation and demo video
