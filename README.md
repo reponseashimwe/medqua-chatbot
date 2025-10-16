@@ -8,7 +8,6 @@ A domain-specific AI chatbot for healthcare built using fine-tuned Transformer m
 -   **FastAPI Backend:** [https://huggingface.co/spaces/reponseashimwe/health-chatbot](https://huggingface.co/spaces/reponseashimwe/health-chatbot)
 -   **Gradio Interface:** [https://huggingface.co/spaces/reponseashimwe/gradio-chatbot](https://huggingface.co/spaces/reponseashimwe/gradio-chatbot)
 -   **GitHub Repository:** [https://github.com/reponseashimwe/medqua-chatbot](https://github.com/reponseashimwe/medqua-chatbot)
--   **Demo Video:** [https://drive.google.com/drive/folders/1KqyH4DL5LVV7RxoW2XM5Uu_W9e7aNhnw?usp=drive_link](https://drive.google.com/drive/folders/1KqyH4DL5LVV7RxoW2XM5Uu_W9e7aNhnw?usp=drive_link)
 
 ## Project Overview
 
