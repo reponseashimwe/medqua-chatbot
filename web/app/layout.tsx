@@ -5,14 +5,18 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Healthcare Chatbot - AI Medical Assistant",
-	description: "Get accurate and compassionate healthcare information from our AI-powered medical assistant",
+	title: "Healthcare AI - Your Medical Assistant",
+	description:
+		"Get expert healthcare guidance powered by AI. Ask medical questions and receive accurate, compassionate information.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<html lang='en'>
-			<body className={inter.className}>{children}</body>
+		<html
+			lang='en'
+			className='dark'
+		>
+			<body className={`${inter.className} bg-slate-900`}>{children}</body>
 		</html>
 	);
 }
