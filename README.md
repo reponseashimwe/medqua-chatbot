@@ -333,39 +333,10 @@ prompt = "You are a medical expert. Provide a clear, accurate, and comprehensive
 **Q:** What is diabetes?  
 **A:** Diabetes is a chronic health condition that affects how your body turns food into energy. When you have diabetes, your body either doesn't make enough insulin or can't use the insulin it makes as well as it should. Insulin is a hormone that helps glucose (sugar) enter your cells to be used for energy. Without enough insulin, too much blood sugar stays in your bloodstream, which can cause serious health problems over time, including heart disease, vision loss, and kidney disease.
 
-### Example 2: Symptoms
-
-**Q:** What are the symptoms of flu?  
-**A:** Flu symptoms usually come on suddenly and can include:
-
--   Fever or feeling feverish/chills
--   Cough
--   Sore throat
--   Runny or stuffy nose
--   Muscle or body aches
--   Headaches
--   Fatigue (tiredness)
--   Some people may have vomiting and diarrhea, though this is more common in children than adults
-
-### Example 3: Prevention
-
-**Q:** How can I prevent heart disease?  
-**A:** You can help prevent heart disease by following these steps:
-
--   Don't smoke or use tobacco
--   Get regular physical activity (at least 30 minutes most days)
--   Eat a heart-healthy diet rich in fruits, vegetables, and whole grains
--   Maintain a healthy weight
--   Manage stress through relaxation techniques
--   Get quality sleep (7-9 hours per night)
--   Manage other health conditions like high blood pressure, high cholesterol, and diabetes
--   Limit alcohol consumption
--   Get regular health screenings
-
-### Example 4: Out-of-Domain (Safety)
+### Example 2: Out-of-Domain (Safety)
 
 **Q:** What's the weather like today?  
-**A:** I'm a medical information assistant designed to answer health-related questions. For weather information, please consult a weather service or app.
+**A:** I appreciate your question, but I am an AI Healthcare Assistant, specializing only in medical and health-related topics. I cannot provide information about sports, geography, or entertainment. Please ask me a question about health!
 
 ## Getting Started
 
@@ -501,7 +472,6 @@ python app.py
 
 ```
 medqua-chatbot/
-├── api/                          # FastAPI backend (legacy)
 ├── data/                         # Dataset and visualizations
 │   ├── medquad.csv
 │   ├── train.csv, val.csv, test.csv
@@ -518,8 +488,6 @@ medqua-chatbot/
 ├── web/                         # Next.js frontend
 ├── chatbot_notebook.ipynb       # Main training notebook
 ├── README.md                    # This file
-├── REPORT.md                    # Project report
-├── SCRIPT.md                    # Demo video script
 ├── TASK.md                      # Project requirements
 └── requirements.txt
 ```
@@ -528,85 +496,40 @@ medqua-chatbot/
 
 ### Machine Learning & NLP
 
--   TensorFlow 2.15+
--   Keras 2.15+
--   Hugging Face Transformers
--   Hugging Face Datasets
--   Hugging Face Evaluate
--   NLTK
--   SacreBLEU
+`TensorFlow 2.15+`
+`Keras 2.15+`
+`Hugging Face Transformers`
+`Hugging Face Datasets`
+`Hugging Face Evaluate`
+`NLTK`
+`SacreBLEU`
 
 ### Data Processing & Visualization
 
--   Pandas
--   NumPy
--   Matplotlib
--   Seaborn
--   Kaggle Hub
+`Pandas`
+`NumPy`
+`Matplotlib`
+`Seaborn`
+`Kaggle Hub`
 
 ### Backend & API
 
--   FastAPI
--   Uvicorn
--   Pydantic
+`FastAPI`
+`Uvicorn`
+`Pydantic`
 
 ### Frontend
 
--   Next.js 14
--   TypeScript
--   Tailwind CSS
+`Next.js 14`
+`TypeScript`
+`Tailwind CSS`
 
 ### Deployment
 
--   Hugging Face Spaces
--   Vercel
--   Docker
--   Gradio
-
-## Rubric Compliance
-
-### Project Definition & Domain Alignment (5/5 pts)
-
--   Clear healthcare domain focus
--   Well-justified medical information chatbot
--   Addresses real need for accessible health information
-
-### Dataset Collection & Preprocessing (10/10 pts)
-
--   High-quality MedQuAD dataset (16,407 samples)
--   Comprehensive preprocessing (cleaning, tokenization, normalization)
--   WordPiece tokenization for T5
--   Detailed documentation of all steps
--   Proper train/val/test splits
-
-### Model Fine-tuning (15/15 pts)
-
--   Multiple hyperparameter experiments (5 configurations)
--   Systematic testing of learning rates, batch sizes, epochs
--   371% improvement over baseline
--   Comprehensive experiment comparison table
--   Decoding strategy optimization
-
-### Performance Metrics (5/5 pts)
-
--   BLEU, ROUGE-1, ROUGE-2, ROUGE-L metrics
--   Thorough analysis with composite scoring
--   Qualitative testing
--   Out-of-domain testing
-
-**Total: 35/35 pts**
-
-## Demo Video
-
-**Link:** [View on Google Drive](https://drive.google.com/drive/folders/1KqyH4DL5LVV7RxoW2XM5Uu_W9e7aNhnw?usp=drive_link)
-
-The demo video (5-10 minutes) showcases:
-
--   Live chatbot interactions
--   User interface walkthrough
--   Model performance examples
--   Technical insights and challenges
--   Deployment architecture
+`Hugging Face Spaces`
+`Vercel`
+`Docker`
+`Gradio`
 
 ## Future Improvements
 
@@ -670,9 +593,4 @@ This project is part of an academic assignment at African Leadership University.
 -   Hugging Face - For the Transformers library and model hosting
 -   Google Research - For the Flan-T5 model
 -   TensorFlow Team - For the deep learning framework
--   ALU Faculty - For guidance and support
--   Open Source Community - For the amazing tools and libraries
-
----
-
 Note: This is an educational project demonstrating NLP and Transformer fine-tuning skills. The chatbot should be used responsibly and not as a replacement for professional medical consultation.
