@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+pydantic
+transformers
+torch
+sentencepiece
+protobuf
+python-multipart
+python-dotenv
+tensorflow
+
