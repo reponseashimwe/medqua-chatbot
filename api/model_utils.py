@@ -45,18 +45,20 @@ def load_model() -> Tuple:
         )
         print("✅ Tokenizer loaded successfully")
         
-        # Load model for CPU (no quantization)
-        print("🤖 Loading model from TensorFlow weights...")
-        print("⏳ This takes 2-3 minutes on first load (downloads ~440MB model)")
+        # Load model with memory optimization
+        print("🤖 Loading model with memory optimization...")
+        print("⏳ This may take a minute as weights are processed.")
         
         model = T5ForConditionalGeneration.from_pretrained(
             model_id,
             token=hf_token,
-            from_tf=True,  # Convert TensorFlow weights to PyTorch
-            low_cpu_mem_usage=True  # Optimize for CPU deployment
+            from_tf=True, 
+            torch_dtype=torch.float16,
+            device_map="auto",
+            low_cpu_mem_usage=True
         )
         
-        # Ensure model is on CPU
+        # Ensure model is on CPU (will be the case with device_map="auto" anyway)
         model = model.to('cpu')
         model.eval()  # Set to evaluation mode
         
@@ -68,6 +70,7 @@ def load_model() -> Tuple:
     except Exception as e:
         print(f"❌ Error loading model: {str(e)}")
         raise
+
 def is_greeting(message: str) -> bool:
     """
     Check if the message is a simple greeting
