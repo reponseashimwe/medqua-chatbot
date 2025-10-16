@@ -4,31 +4,15 @@ __pycache__/
 *$py.class
 *.so
 .Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual Environment
 venv/
-env/
 ENV/
-.venv
+env/
+*.egg-info/
+dist/
+build/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-*/.ipynb_checkpoints/*
 
 # IDEs
 .vscode/
@@ -36,35 +20,41 @@ ENV/
 *.swp
 *.swo
 *~
+
+# OS
 .DS_Store
+Thumbs.db
 
-# Logs and Outputs
+# Data
+data/*.csv
+!data/medquad.csv
+
+# Models (large files)
+models/
+*.h5
+*.pb
+*.ckpt
+
+# Logs
 *.log
-logs/
-*.out
-*.pid
 
-# Environment variables
+# Environment
 .env
-.env.local
 
-# TensorFlow
-*.tflite
-*.tfrecord
+# Node modules (for web app)
+node_modules/
+.next/
+out/
 
-# Training artifacts
-checkpoints/
-runs/
-wandb/
+# Gradio chatbot - separate git repo
+gradio-chatbot/.git
+gradio-chatbot/__pycache__
 
-# Temporary files
-tmp/
-temp/
-*.tmp
+# Health chatbot API - separate git repo  
+health-chatbot/.git
+health-chatbot/__pycache__
+health-chatbot/venv
 
-# Web
-web/node_modules/
-web/dist/
-web/build/
-web/.next/
-
+# Keep the code but ignore git subdirectories
+!gradio-chatbot/**
+!health-chatbot/**
