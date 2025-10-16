@@ -1,11 +1,11 @@
-fastapi
-uvicorn[standard]
-pydantic
-transformers
+--extra-index-url https://download.pytorch.org/whl/cpu
 torch
+accelerate
+transformers
 sentencepiece
 protobuf
+fastapi
+uvicorn
+pydantic
 python-multipart
 python-dotenv
-tensorflow
-
