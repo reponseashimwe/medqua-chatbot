@@ -25,10 +25,6 @@ build/
 .DS_Store
 Thumbs.db
 
-# Data
-data/*.csv
-!data/medquad.csv
-
 # Models (large files)
 models/
 *.h5
