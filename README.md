@@ -20,7 +20,6 @@ Healthcare is chosen as the domain for several critical reasons:
 -   **Universal Impact**: Health affects everyone, making this solution universally relevant
 -   **Information Gap**: Significant gap between expert medical knowledge and public understanding
 -   **Accessibility**: Not everyone has immediate access to healthcare professionals for basic questions
--   **Misinformation Problem**: Reliable AI can counter unreliable internet sources
 -   **Scalability**: An AI chatbot can serve unlimited users simultaneously
 
 The chatbot helps users understand medical conditions, learn about treatments, and make informed decisions about when to seek professional care.
@@ -28,10 +27,6 @@ The chatbot helps users understand medical conditions, learn about treatments, a
 ## Project Overview
 
 A domain-specific AI chatbot for healthcare built using fine-tuned Transformer models (Flan-T5) to answer medical questions. This project demonstrates advanced NLP techniques including model fine-tuning, hyperparameter optimization, and deployment strategies.
-
-## Project Overview
-
-This is an individual project that implements a healthcare-focused chatbot using state-of-the-art Transformer models. The system provides medical information and answers health-related questions based on the MedQuAD dataset.
 
 ### Key Details
 
