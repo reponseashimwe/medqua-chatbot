@@ -500,10 +500,8 @@ medqua-chatbot/
 ├── gradio-chatbot/              # Gradio interface (separate repo)
 ├── health-chatbot/              # FastAPI backend (separate repo)
 ├── web/                         # Next.js frontend
-├── chatbot_notebook.ipynb       # Main training notebook
+├── notebook.ipynb       # Main training notebook
 ├── README.md                    # This file
-├── TASK.md                      # Project requirements
-└── requirements.txt
 ```
 
 ## Technologies Used
