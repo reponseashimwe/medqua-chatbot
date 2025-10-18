@@ -1,13 +1,33 @@
 # Healthcare Chatbot - Medical QA System
 
-A domain-specific AI chatbot for healthcare built using fine-tuned Transformer models (Flan-T5) to answer medical questions. This project demonstrates advanced NLP techniques including model fine-tuning, hyperparameter optimization, and deployment strategies.
-
 ## Live Deployments
 
 -   **Web Application:** [https://medqua-chatbot.vercel.app/](https://medqua-chatbot.vercel.app/)
 -   **FastAPI Backend:** [https://huggingface.co/spaces/reponseashimwe/health-chatbot](https://huggingface.co/spaces/reponseashimwe/health-chatbot)
 -   **Gradio Interface:** [https://huggingface.co/spaces/reponseashimwe/gradio-chatbot](https://huggingface.co/spaces/reponseashimwe/gradio-chatbot)
 -   **GitHub Repository:** [https://github.com/reponseashimwe/medqua-chatbot](https://github.com/reponseashimwe/medqua-chatbot)
+
+## Problem Statement
+
+Access to accurate medical information is a global challenge. Patients struggle to find reliable health answers, leading to delayed care, misinformation from unreliable sources, and overwhelmed healthcare systems. Many people lack the ability to obtain, process, and understand basic health information needed to make appropriate health decisions.
+
+This project addresses this gap by developing an AI-powered healthcare chatbot that provides evidence-based answers to medical questions, serving as an accessible first point of contact for health information.
+
+## Domain Justification
+
+Healthcare is chosen as the domain for several critical reasons:
+
+-   **Universal Impact**: Health affects everyone, making this solution universally relevant
+-   **Information Gap**: Significant gap between expert medical knowledge and public understanding
+-   **Accessibility**: Not everyone has immediate access to healthcare professionals for basic questions
+-   **Misinformation Problem**: Reliable AI can counter unreliable internet sources
+-   **Scalability**: An AI chatbot can serve unlimited users simultaneously
+
+The chatbot helps users understand medical conditions, learn about treatments, and make informed decisions about when to seek professional care.
+
+## Project Overview
+
+A domain-specific AI chatbot for healthcare built using fine-tuned Transformer models (Flan-T5) to answer medical questions. This project demonstrates advanced NLP techniques including model fine-tuning, hyperparameter optimization, and deployment strategies.
 
 ## Project Overview
 
@@ -592,4 +612,4 @@ This project is part of an academic assignment at African Leadership University.
 -   Hugging Face - For the Transformers library and model hosting
 -   Google Research - For the Flan-T5 model
 -   TensorFlow Team - For the deep learning framework
-Note: This is an educational project demonstrating NLP and Transformer fine-tuning skills. The chatbot should be used responsibly and not as a replacement for professional medical consultation.
+    Note: This is an educational project demonstrating NLP and Transformer fine-tuning skills. The chatbot should be used responsibly and not as a replacement for professional medical consultation.
